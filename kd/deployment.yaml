@@ -104,18 +104,18 @@ spec:
               configMapKeyRef:
                 name: hocs-converter
                 key: max_filesize
-        - name: SUPPORTED_TYPES
-            valueFrom:
-              configMapKeyRef:
-                name: hocs-converter
-                key: supported_types
-        - name: CONVERTER_TIMEOUT
-            valueFrom:
-              configMapKeyRef:
-                name: hocs-converter
-                key: converter_timeout
-        - name: NODE_ENV
-          value: 'production'
+          - name: SUPPORTED_TYPES
+              valueFrom:
+                configMapKeyRef:
+                  name: hocs-converter
+                  key: supported_types
+          - name: CONVERTER_TIMEOUT
+              valueFrom:
+                configMapKeyRef:
+                  name: hocs-converter
+                  key: converter_timeout
+          - name: NODE_ENV
+            value: 'production'
         resources:
           limits:
             cpu: 1000m
