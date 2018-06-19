@@ -100,20 +100,20 @@ spec:
           - name: PORT
             value: '8080'
           - name: MAX_FILESIZE
-              valueFrom:
-                configMapKeyRef:
-                  name: hocs-converter
-                  key: max_filesize
+            valueFrom:
+              configMapKeyRef:
+                name: hocs-converter
+                key: max_filesize
           - name: SUPPORTED_TYPES
-              valueFrom:
-                configMapKeyRef:
-                  name: hocs-converter
-                  key: supported_types
+            valueFrom:
+              configMapKeyRef:
+                name: hocs-converter
+                key: supported_types
           - name: CONVERTER_TIMEOUT
-              valueFrom:
-                configMapKeyRef:
-                  name: hocs-converter
-                  key: converter_timeout
+            valueFrom:
+              configMapKeyRef:
+                name: hocs-converter
+                key: converter_timeout
           - name: NODE_ENV
             value: 'production'
         resources:
