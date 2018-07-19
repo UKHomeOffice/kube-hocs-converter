@@ -48,7 +48,7 @@ spec:
             mountPath: /etc/ssl/certs
             readOnly: true
       - name: proxy
-        image: quay.io/ukhomeofficedigital/nginx-proxy:v3.2.9
+        image: quay.io/ukhomeofficedigital/nginx-proxy:v3.2.11
         imagePullPolicy: Always
         securityContext:
           runAsNonRoot: true
@@ -118,10 +118,10 @@ spec:
             value: 'production'
         resources:
           limits:
-            cpu: 1000m
-            memory: 400Mi
+            cpu: 300m
+            memory: 1024Mi
           requests:
-            cpu: 200m
+            cpu: 100m
             memory: 100Mi
         ports:
           - name: http
